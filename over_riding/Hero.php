@@ -22,6 +22,7 @@ class Hero
     {
         echo "Nama hero:$this->P_nama<br>";
         echo "darah:$this->P_health<br>";
-        echo "damage:$this->P_attack<br><br>";
+        echo "damage:$this->P_attack<br>";
+        echo "hati hati awas ada eudora<br><br>";
     }
  }
