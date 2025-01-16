@@ -34,7 +34,7 @@ class Siswa extends koneksi{
         return $data->fetch_assoc();
     }
 
-    public function update_data_siswa($a_id,$a_nama,$a_nisn,$a_kelas){
+    public function update_data_siswa($a_nama,$a_nisn,$a_kelas,$a_id){
         $query="UPDATE siswa SET nama='$a_nama',nisn='$a_nisn',kelas='$a_kelas' WHERE id='$a_id'";
         $this->P_koneksi->query($query);
     }

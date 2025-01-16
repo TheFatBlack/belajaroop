@@ -47,7 +47,7 @@
         <a href='controller/siswaController.php?aksi=delete&id=$da[id]' 
         class='btn btn-sm btn-danger'>Hapus</a>
         
-        <a href='view/edit.php?id='$da[id]' class='btn btn-sm btn-warning'>Edit</a>
+        <a href='view/edit.php?id=$da[id]' class='btn btn-sm btn-warning'>Edit</a>
         </td>
         </tr>";
     }
