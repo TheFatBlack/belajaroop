@@ -8,7 +8,28 @@
 </head>
 
 <body>
-    <form action="post"></form>
+    <form action="" method="post">
+        <input type="text" name="unik_id" id="unik_id" placeholder="Masukkan uni id">
+        <button type="submit">Cari</button>
+    </form>
+
+    <?php
+        include_once "class/Siswa.php";
+        include_once "class/Absen.php";
+
+        if(isset($_POST['unik_id'])){
+            $siswa=new Siswa();
+            if($data=$siswa->cari_siswa_by_id($_POST['unik_id'])){
+                echo "Nama:{$data['nama']}<br>";
+                echo "Nisn:{$data['nisn']}<br>";
+                echo "Kelas:{$data['kelas']}";
+                $absen=new Absen();
+                $absen->simpan_absen($data['id']);
+            }else{
+                echo "<h1>Data tidak ditemukan</h1>";
+            }
+        }
+    ?>
 </body>
 
 </html>
