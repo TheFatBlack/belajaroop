@@ -48,8 +48,10 @@
         class='btn btn-sm btn-danger'>Hapus</a>
         
         <a href='view/edit.php?id=$da[id]' class='btn btn-sm btn-warning'>Edit</a>
+        <a href='view/qrcode.php?id=$da[id]' class='btn btn-sm btn-info'>QR</a>
         </td>
         </tr>";
+        $no++;
     }
     ?>
                         </tbody>

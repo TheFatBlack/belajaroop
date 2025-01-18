@@ -19,7 +19,7 @@
 
         if(isset($_POST['unik_id'])){
             $siswa=new Siswa();
-            if($data=$siswa->cari_siswa_by_id($_POST['unik_id'])){
+            if($data=$siswa->cari_siswa_by_unik_id($_POST['unik_id'])){
                 echo "Nama:{$data['nama']}<br>";
                 echo "Nisn:{$data['nisn']}<br>";
                 echo "Kelas:{$data['kelas']}";
